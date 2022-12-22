@@ -3,7 +3,15 @@ package com.employeewagecomputation;
 import java.util.Random;
 
 public class EmployeeWageComputation {
- 
+  public static void month(int hr)
+  {
+	  if(hr>100 ) {
+		  System.out.println("Total Wage in this month of the Employee is "+(hr*20));
+	  }
+	  else {
+		  System.out.println("Employee have not fullfill Day and Hours requirment ");
+	  }
+  }
 	public static void main(String[] args) {
 		
 		System.out.println("**********Wel-Come In Employee Wage Computation**********");
@@ -11,10 +19,12 @@ public class EmployeeWageComputation {
          for(int i=0;i<20;i++) {
      		Random random =new Random();
      		int a=random.nextInt(2);
+     		System.out.println(a);
              if(a==1) {
             	 totalday++;
+            	 System.out.println(totalday);
              }
 	}
-         System.out.println("Total Wage of the month is "+totalday*8*20);
+         month(totalday*8);
 	}
 }
