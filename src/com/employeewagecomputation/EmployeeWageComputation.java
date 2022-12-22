@@ -5,31 +5,46 @@ import java.util.Random;
 public class EmployeeWageComputation {
 
 	public static  int randomnumber(int a)
-	{
+	{ 
 		Random random =new Random();
 		a=random.nextInt(2);
-		return a;
+		return (a);
 		
 	}
-	public static void presenti(int a) {
+	public static  int randPartTime(int a)
+	{ 
+		Random random =new Random();
+		a=random.nextInt(2);
+		return (a);
+		
+	}
+	public static void presenti(int a,int b) {
 		int num=randomnumber(a);
-		if(num==1) 
+		int num1=randPartTime(b);
+		if(num==1 && num1==1) 
 		{
-			System.out.println("Employee is Present");
+			System.out.println("Employee is Present And Also Do Part time work");
+			System.out.println("Wage of the day is ::"+(20*8)*2);
+		}	
+		else if(num==1 && num1==0) 
+		{
+			System.out.println("Employee is Present ");
 			System.out.println("Wage of the day is ::"+(20*8));
 		}	
-		else 
-		{
+		else if(num==0 && num1==1) 
+			{
+				System.out.println("Employee Do Part time work");
+				System.out.println("Wage of the day is ::"+(20*8));
+			}	
+		else{
 			System.out.println("Employee is Absent");
 		}
 		
-	
-	
 	}
 	public static void main(String[] args) {
 		
 		System.out.println("**********Wel-Come In Employee Wage Computation**********");
-         presenti(randomnumber(0));
+         presenti(randomnumber(0), 0);
 	}
 
 }
