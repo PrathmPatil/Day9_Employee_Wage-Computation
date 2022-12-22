@@ -13,10 +13,18 @@ public class EmployeeWageComputation {
 	}
 	public static void presenti(int a) {
 		int num=randomnumber(a);
-		if(num==1)
+		if(num==1) 
+		{
 			System.out.println("Employee is Present");
-		else
+			System.out.println("Wage of the day is ::"+(20*8));
+		}	
+		else 
+		{
 			System.out.println("Employee is Absent");
+		}
+		
+	
+	
 	}
 	public static void main(String[] args) {
 		
