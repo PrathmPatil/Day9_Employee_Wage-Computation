@@ -18,33 +18,22 @@ public class EmployeeWageComputation {
 		return (a);
 		
 	}
-	public static void presenti(int a,int b) {
+	public static void presenti(int a) {
 		int num=randomnumber(a);
-		int num1=randPartTime(b);
-		if(num==1 && num1==1) 
-		{
-			System.out.println("Employee is Present And Also Do Part time work");
-			System.out.println("Wage of the day is ::"+(20*8)*2);
-		}	
-		else if(num==1 && num1==0) 
-		{
-			System.out.println("Employee is Present ");
-			System.out.println("Wage of the day is ::"+(20*8));
-		}	
-		else if(num==0 && num1==1) 
-			{
-				System.out.println("Employee Do Part time work");
-				System.out.println("Wage of the day is ::"+(20*8));
-			}	
-		else{
-			System.out.println("Employee is Absent");
+		switch(num) {
+		case 1: System.out.println("Employee Present");
+		       System.out.println("Wage of Employee is "+(20*8));
+		       break;
+		case 0:System.out.println("Employe are Absent");
+		       System.out.println("Wage of Employee is "+0);
 		}
+		
 		
 	}
 	public static void main(String[] args) {
 		
 		System.out.println("**********Wel-Come In Employee Wage Computation**********");
-         presenti(randomnumber(0), 0);
+         presenti(randomnumber(0));
 	}
 
 }
